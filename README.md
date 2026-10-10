@@ -27,9 +27,9 @@ The build outputs `dist/`, including only the used logo and any configured video
 - `src/app.js`: language selection/persistence, menu behavior and content rendering.
 - `index.html`: semantic page structure and initial Albanian metadata.
 
-## Add the video later
+## Hero video
 
-Place your chosen video in `Media/company-video.mp4` and an optional poster in `Media/company-video-poster.jpg`. In `src/config.js`, set `media.videoSrc` to `'./Media/company-video.mp4'` and `media.poster` to `'./Media/company-video-poster.jpg'`. Use a broadly compatible MP4 with H.264 encoding. The component starts muted, inline and looping, exposes a translated pause/play control, and does not autoplay for reduced-motion visitors. The poster remains available before playback. With `videoSrc: null`, the area stays intentionally empty and makes no video request. Rebuild after changes.
+The hero background uses `Media/2nd_video.mp4`. Desktop proportions are 16:9, and `object-fit: contain` preserves the entire video frame. On mobile the hero grows to fit its text and uses `object-fit: cover` to remove black bands, cropping the sides of the landscape video as needed. A dark overlay keeps the presentation readable. Playback is muted, inline and looping, without controls, and respects reduced-motion preferences. Change `media.videoSrc` in `src/config.js` to replace the video, or set it to null to disable it. An optional poster path can be set through `media.poster`. Rebuild after changes.
 
 ## Add email or WhatsApp later
 
